@@ -2,6 +2,7 @@
 :root{
     --btn-color:#B70E21;
     --about-sec:#1d1d23;
+    text-underline-offset: ;
 }
 *{
     padding: 0;
@@ -31,11 +32,17 @@
     width: 60px;
 }
 
+.navbar, .dropdown-menu, a{
+    background: #1d1d23;
+    background-color: #1d1d23;
+}
+
 .navbar a {   /*boton menu*/
     color: white;
     margin: 0.5rem;
     padding: 0.5rem;
     font-size: 1.5rem;
+    /* background: #1d1d23; */
 }
 .navbar a:hover {  /*boton menu*/
     color: var(--btn-color);
@@ -118,37 +125,17 @@
     z-index: -1; /* Coloca la imagen detrás del color oscuro */
 }
 
+/* nav ul {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+}
 
+nav ul:focus {
+    display: block;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+nav li {
+    padding: 5px;
+} */
