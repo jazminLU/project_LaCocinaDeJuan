@@ -2,7 +2,6 @@
 :root{
     --btn-color:#B70E21;
     --about-sec:#1d1d23;
-    text-underline-offset: ;
 }
 *{
     padding: 0;
@@ -32,20 +31,11 @@
     width: 60px;
 }
 
-.navbar, .dropdown-menu, a{
-    background: #1d1d23;
-    background-color: #1d1d23;
-}
-
 .navbar a {   /*boton menu*/
     color: white;
     margin: 0.5rem;
     padding: 0.5rem;
     font-size: 1.5rem;
-    /* background: #1d1d23; */
-}
-.navbar a:hover {  /*boton menu*/
-    color: var(--btn-color);
 }
 
 .icons div {
@@ -59,14 +49,15 @@
 }
 
 .icons a{   /*boton menu*/
-   color: white;
-   padding: 0.6rem 1.5rem;
-   border: 1px solid #B70E21;
-   border-radius: 10px;
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border: 1px solid #B70E21;
+    border-radius: 10px;
     font-size: 18px;
     transition: 0.5s;
     display: inline-block;
 }
+
 .contact-btn:hover{
     transform: scale(1.1);
     background: var(--btn-color);
@@ -125,17 +116,23 @@
     z-index: -1; /* Coloca la imagen detrás del color oscuro */
 }
 
-/* nav ul {
-    display: none;
-    position: absolute;
-    background-color: white;
-    border: 1px solid #ccc;
+.dropdown-menu{
+    display: flex;
 }
 
-nav ul:focus {
-    display: block;
+.dropdown-item {
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+    justify-content: space-around;
 }
 
-nav li {
-    padding: 5px;
-} */
+.navbar a {
+    text-decoration: none !important;
+}
+
+@media (min-width: 768px) {
+    .dropdown-item {
+        width: auto;
+    }
+}
