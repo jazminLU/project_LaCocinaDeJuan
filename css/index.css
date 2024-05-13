@@ -38,14 +38,6 @@
     font-size: 1.5rem;
 }
 
-.navbar a:hover, .dropdown {  /*boton menu*/
-    color: var(--btn-color);
-}
-
-.dropdown, .dropdown-menu, .dropdown-item {
-    background: #1d1d23;
-}
-
 .icons div {
     color: white;
     font-size: 1.5rem;
@@ -122,4 +114,25 @@
     height: 100%;
     object-fit: cover;
     z-index: -1; /* Coloca la imagen detrás del color oscuro */
+}
+
+.dropdown-menu{
+    display: flex;
+}
+
+.dropdown-item {
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.navbar a {
+    text-decoration: none !important;
+}
+
+@media (min-width: 768px) {
+    .dropdown-item {
+        width: auto;
+    }
 }
