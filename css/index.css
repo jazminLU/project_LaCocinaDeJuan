@@ -62,6 +62,8 @@
     transform: scale(1.1);
     background: var(--btn-color);
     border: 1px solid white ;
+    text-decoration: none;
+    color: #1d1d23;
 }
 
 @media (max-width:767px) {
