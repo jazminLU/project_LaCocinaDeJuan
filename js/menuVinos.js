@@ -1,5 +1,9 @@
 async function cargarVinos() {
+    const loader = document.getElementById('loader');
     try {
+        // Mostrar el loader
+        loader.style.display = 'block';
+
         // URL de la API que proporciona los datos de los cócteles
         const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a';
 
@@ -33,6 +37,9 @@ async function cargarVinos() {
         document.querySelector('.sucursales').innerHTML = vinosHTML;
     } catch (error) {
         console.error('Error:', error);
+    } finally {
+        // Ocultar el loader
+        loader.style.display = 'none';
     }
 }
 
