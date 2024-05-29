@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/login_signup.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/login.css">
     <!-- GOOGLE FONTs -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <!-- FONT AWESOME -->
@@ -19,36 +20,36 @@
         <br>
         <div><a href="../index.html" class="boton-volver">Home</a></div>
 
-        <h1 class="logo">Iniciar Sesión <span>LaCocinaDeJuan</span></h1>
+        <h1 class="logo my-5">Iniciar Sesión <span>LaCocinaDeJuan</span></h1>
 
         <div class="contact-wrapper animated bounceInUp">
             <div class="contact-form">
                 <h3>Iniciar Sesión</h3>
-                <form id="loginForm" >
-                    <p>
+                <form id="loginForm" class="flex-column">
+                    <div class="my-4">
                         <label>Email</label>
                         <input type="text" name="email" id="email" >
-                        <span id="emailError" class="error"></span>
-                    </p>
-                    <p>
+                        <span id="emailError" class="error mb-2"></span>
+                    </div>
+                    <div class="my-2">
                         <label>Password</label>
                         <input type="password" name="password" id="password" >
                         <span id="passwordError" class="error"></span>
-                    </p>
-                    
+                    </div>
+                    <div class="mt-2">
                         <button type="submit">Login</button>
-                    
-                    <p>
-                        <a class="block"><small>Registrate</small></a>
-                    </p>
+                    </div>
                 </form>
+                
             </div>
+            
         </div>
-
+        <div class="mt-4 text-center">
+            <small>&copy; 2024 La Cocina de Juan. Todos los derechos reservados.</small>
+        </div>
     </div>
     <br>
-    <p>&copy; 2024 La Cocina de Juan. Todos los derechos reservados.</p>
-<br>
+    <br>
     <script src="../js/login.js"></script>
 </body>
 </html>

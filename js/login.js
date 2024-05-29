@@ -10,13 +10,17 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     let password = passInput.value.trim();
     
     let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let validEmail = false;
+    let validPassword = false;
 
     // Validación del email
     if (!emailRegex.test(email)) {
         emailError.textContent = "Ingrese un correo valido.";
         emailInput.focus();
-        return;
+        login = false;
+        //return;
     } else {
+        validEmail = true;
         emailError.textContent = "";
     }
 
@@ -24,19 +28,25 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     if (password === "") {
         passwordError.textContent = "La contraseña no puede estar vacía.";
         passInput.focus();
-        return;
+        //return;
     } else {
+        validPassword = true;
         passwordError.textContent = "";
     }
 
-    // Mostrar mensaje de bienvenida
-    alert("Bienvenido, " + emailInput.value + "!");
+    if (validEmail && validPassword) {
+        // Mostrar mensaje de bienvenida
+        alert("Bienvenido, " + emailInput.value + "!");
 
-    // Limpiar los inputs
-    emailInput.value = "";
-    passInput.value = "";
+        // Limpiar los inputs
+        emailInput.value = "";
+        passInput.value = "";
 
-    // Opcional: Mostrar el mensaje de logueo en la consola
-    console.log("Logueado" + " email --> " + emailInput.value + " Id --> " + passInput.value);
+        // Opcional: Mostrar el mensaje de logueo en la consola
+        console.log("Logueado" + " email --> " + emailInput.value + " Id --> " + passInput.value);
+    } else {
+        return;
+    }
+
 });
 
