@@ -23,9 +23,13 @@ async function altaTragos() {
     headers: new Headers({
       "Content-Type": "text/json",
     })   
-  }).then(function (response) {
+  })
+  .then(function (response) {
     if (response.ok) {
       alert("Alta de tragos correcta");
+    }
+    else{
+      throw new Error('Server returned ' + response.status);
     }
   })
   .catch(function (error) {
