@@ -14,11 +14,25 @@
     100% { transform: rotate(360deg); }
 }
 
-.sucursales {
+.tragos {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
+}
+
+.tragos-wrapper {
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+}
+
+.tragos-wrapper > * {
+    padding: 1em;
+}
+
+.divaltadetragos{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
 }
 
 .card {
