@@ -22,14 +22,13 @@ async function altaTragos() {
     body: json,
     headers: new Headers({
       "Content-Type": "text/json",
-    })
-      .then(function (response) {
-        if (response.ok) {
-          alert("Alta de tragos correcta");
-        }
-      })
-      .catch(function (error) {
-        console.log("Hubo un problema con la petición Fetch:" + error.message);
-      }),
+    })   
+  }).then(function (response) {
+    if (response.ok) {
+      alert("Alta de tragos correcta");
+    }
+  })
+  .catch(function (error) {
+    console.log("Hubo un problema con la petición Fetch:" + error.message);
   });
 }
