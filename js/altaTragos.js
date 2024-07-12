@@ -21,7 +21,7 @@ async function altaTragos() {
     method: "POST",
     body: json,
     headers: new Headers({
-      "Content-Type": "text/json",
+      "Content-Type": "application/json",
     })   
   })
   .then(function (response) {
