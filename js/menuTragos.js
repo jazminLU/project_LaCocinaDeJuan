@@ -34,7 +34,7 @@ async function cargarVinos() {
         `).join('');
 
         // Mostrar los cócteles en el div "sucursales"
-        document.querySelector('.sucursales').innerHTML = tragosHTML;
+        document.querySelector('.tragos').innerHTML = tragosHTML;
     } catch (error) {
         console.error('Error:', error);
     } finally {

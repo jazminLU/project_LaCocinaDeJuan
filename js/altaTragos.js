@@ -29,6 +29,6 @@ async function altaTragos() {
     }
   })
   .catch(function (error) {
-    console.log("Hubo un problema con la petición Fetch:" + error.message);
+    console.log("Hubo un problema con la petición Fetch:" + error);
   });
 }
