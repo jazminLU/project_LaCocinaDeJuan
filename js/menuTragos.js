@@ -5,7 +5,7 @@ async function cargarVinos() {
         loader.style.display = 'block';
 
         // URL de la API que proporciona los datos de los cócteles
-        const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a';
+        const url = 'http://localhost:8080/lacocinadejuan/ListarBebidasController';
 
         // Realizar la solicitud a la API
         const response = await fetch(url);
@@ -19,22 +19,22 @@ async function cargarVinos() {
         const data = await response.json();
 
         // Obtener los primeros 20 cócteles
-        const vinos = data.drinks.slice(0, 20);
+        //const vinos = data.drinks.slice(0, 20);
 
         // Generar el HTML para mostrar los cócteles
-        const vinosHTML = vinos.map(vino => `
+        const tragosHTML = data.map(trago => `
             <div class="card">
-                <img src="${vino.strDrinkThumb}" class="card-img-top" alt="${vino.strDrink}">
+                <img src="${trago.imagen}" class="card-img-top" alt="${trago.nombre}">
                 <div class="card-body">
-                    <h5 class="card-title">${vino.strDrink}</h5>
-                    <p class="card-text">${vino.strInstructions}</p>
-                    <p class="card-text">Ingredientes: ${vino.strIngredient1}, ${vino.strIngredient2}, ${vino.strIngredient3}</p>
+                    <h5 class="card-title">${trago.nombre}</h5>
+                    <p class="card-text">${trago.descripcion}</p>
+                    <p class="card-text">Precio: ${trago.precio}</p>
                 </div>
             </div>
         `).join('');
 
         // Mostrar los cócteles en el div "sucursales"
-        document.querySelector('.sucursales').innerHTML = vinosHTML;
+        document.querySelector('.sucursales').innerHTML = tragosHTML;
     } catch (error) {
         console.error('Error:', error);
     } finally {
